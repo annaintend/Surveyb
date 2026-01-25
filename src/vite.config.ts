@@ -6,15 +6,8 @@ export default defineConfig({
   build: {
     outDir: 'build',
     sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
   },
-  resolve: {
-    alias: {
-      'figma:asset': '/public/assets',
-    },
+  css: {
+    postcss: './postcss.config.js',
   },
 });
