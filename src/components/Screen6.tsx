@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
+import imgSugarnologooo1 from "@/assets/main_screen.png";
 import img1932 from "figma:asset/2667ac5d63702f710b80a7d97ec5142d0b68ba8e.png";
 
 interface Screen6Props {
