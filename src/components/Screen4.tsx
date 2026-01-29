@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Check } from 'lucide-react';
 import { motion } from 'motion/react';
-import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
+import imgSugarnologooo1 from "@/assets/sugarno-black.png";
 
 interface Screen4Props {
   onNext: (data: Record<string, any>) => void;
