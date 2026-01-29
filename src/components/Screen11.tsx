@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
-import imgSugarnologooo1 from "@/assets/main_screen.png";
+import imgSugarnologooo1 from "@/assets/sugarno-black.png";
 
 interface Screen11Props {
   onNext: (data: Record<string, any>) => void;
