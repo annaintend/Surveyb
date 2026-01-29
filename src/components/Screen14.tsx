@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import imgSugarnologooo1 from "@/assets/main_screen.png";
+import imgSugarnologooo1 from "@/assets/sugarno-black.png";
 import imgWillpower from "figma:asset/f672a3c19e6feb969fca174a2cefcd9b373e2af2.png";
 
 interface Screen14Props {
