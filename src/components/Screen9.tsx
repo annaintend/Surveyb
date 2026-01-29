@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import imgSugarnologooo1 from "@/assets/main_screen.png";
+import imgSugarnologooo1 from "@/assets/sugarno-black.png";
 import img46 from "figma:asset/4be9e467f9ce172d98927aa1570147e391231a06.png";
 
 interface Screen9Props {
