@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import imgSugarnologooo1 from "@/assets/main_screen.png";
+import imgSugarnologooo1 from "@/assets/sugarno-black.png";
 import imgTrustedBy from "@/assets/reviews.png";
 
 interface Screen2Props {
