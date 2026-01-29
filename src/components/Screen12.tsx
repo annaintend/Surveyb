@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import imgSugarnologooo1 from "@/assets/sugarno-black.png";
-import img51 from "figma:asset/154c3c7b4c42e50a3621dac6b5ae63e0d1f9bfda.png";
+import img51 from "@/assets/eating-outside.png";
 
 interface Screen12Props {
   onNext: () => void;
