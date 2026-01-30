@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -9,6 +10,10 @@ interface Screen26Props {
 
 export function Screen26({ onNext }: Screen26Props) {
   const [selectedPlan, setSelectedPlan] = useState<'monthly' | 'annual'>('annual');
+
+  useEffect(() => {
+    window?.amplitude?.track?.("plan_selection_viewed");
+  }, [])
 
   return (
     <div className="h-full bg-[#f5f5f5] flex flex-col overflow-hidden">
@@ -166,6 +171,11 @@ export function Screen26({ onNext }: Screen26Props) {
                 const url = selectedPlan === 'annual' 
                   ? 'https://buy.stripe.com/3cIcN63hFd6odpd6rb93y05'
                   : 'https://buy.stripe.com/8x214o9G3giA5WLdTD93y03';
+
+                window?.amplitude?.track?.("plan_selected", {
+                  plan_id: selectedPlan,
+                  currency: "USD"
+                })
                 window.location.href = url;
               }}
               className="w-full h-[56px] rounded-[32px] text-white font-['Roboto:SemiBold','Noto_Sans_Symbols:SemiBold',sans-serif] font-semibold text-[18px] leading-[22px] uppercase transition-all bg-[#f14e58] hover:bg-[#e03d47]"

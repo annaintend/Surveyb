@@ -24,6 +24,12 @@ import { Screen17C } from './components/Screen17C';
 import { Screen18 } from './components/Screen18';
 import { Screen26 } from './components/Screen26';
 
+declare global {
+  interface Window {
+    amplitude: any | undefined
+  }
+}
+
 export default function App() {
   const [currentScreen, setCurrentScreen] = useState(1);
   const [responses, setResponses] = useState<Record<string, any>>({});
@@ -44,6 +50,11 @@ export default function App() {
   }, []);
 
   const handleNext = (data?: Record<string, any>) => {
+    window.amplitude?.track?.("question_viewed", {
+      question_id: currentScreen,
+      context: 'survey-b'
+    })
+
     if (data) {
       setResponses(prev => ({ ...prev, ...data }));
     }

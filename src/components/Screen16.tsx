@@ -21,6 +21,8 @@ export function Screen16({ onNext }: Screen16Props) {
       setCurrentInsightIndex((prev) => (prev + 1) % insights.length);
     }, 1800);
 
+    window?.amplitude?.track?.("plan_generation_started");
+
     return () => clearInterval(interval);
   }, []);
 

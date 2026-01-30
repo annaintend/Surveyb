@@ -27,6 +27,8 @@ export function Screen18({ onNext }: Screen18Props) {
       });
     }, 1500);
 
+    window?.amplitude?.track?.("plan_generation_started");
+
     return () => clearInterval(interval);
   }, [onNext]);
 

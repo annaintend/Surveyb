@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
 
@@ -12,12 +12,20 @@ export function Screen17B({ onNext }: Screen17BProps) {
 
   const handleContinue = () => {
     onNext({ name, email });
+    window?.amplitude?.track?.("lead_form_submitted", {
+      has_name: !!name.length,
+      has_email: !!email.length
+    });
   };
 
   const isValidEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
+
+  useEffect(() => {
+    window?.amplitude?.track?.("lead_form_viewed")
+  }, [])
 
   const isValid = name.trim().length > 0 && isValidEmail(email.trim());
 
