@@ -144,7 +144,7 @@ export function Screen17({ onNext, responses = {} }: Screen17Props) {
         </div>
 
         {/* Content area - scrollable */}
-        <div className="flex-1 overflow-y-auto pt-[60px] pb-[100px]" style={{ WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
+        <div className="flex-1 overflow-y-auto pt-[60px] pb-[220px]" style={{ WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

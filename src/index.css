@@ -926,16 +926,16 @@
     padding-bottom: calc(var(--spacing) * 32);
   }
 
-  .pb-\[100px\] {
-    padding-bottom: 100px;
-  }
-
   .pb-\[120px\] {
     padding-bottom: 120px;
   }
 
   .pb-\[200px\] {
     padding-bottom: 200px;
+  }
+
+  .pb-\[220px\] {
+    padding-bottom: 220px;
   }
 
   .text-center {
