@@ -25,7 +25,7 @@ export function Screen6({ onNext }: Screen6Props) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="flex-1 flex flex-col items-center justify-start px-6 pt-[80px] sm:pt-[100px] md:justify-center md:pt-[32px] pb-[200px] min-h-0"
+          className="flex-1 flex flex-col items-center justify-start px-6 pt-[55px] sm:pt-[80px] md:justify-center md:pt-[32px] pb-[200px] min-h-0"
         >
           {/* Circular infographic - truly scalable */}
           <div className="w-full max-w-[min(450px,85vw)] flex-shrink mb-8">

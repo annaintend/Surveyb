@@ -23,20 +23,20 @@ export function Screen26({ onNext }: Screen26Props) {
         </div>
 
         {/* Content area - scrollable */}
-        <div className="flex-1 overflow-y-auto pt-[70px] pb-[120px]" style={{ WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
+        <div className="flex-1 overflow-y-auto pt-[60px] pb-[100px]" style={{ WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="px-6 pt-6"
+            className="px-6 pt-2"
           >
             {/* Header section */}
             <div className="text-center mb-8">
               <h1 className="font-['Inter:Bold',sans-serif] font-bold text-[32px] leading-[38px] text-black mb-2">
                 Unlock Premium with
                 <br />
-                a 7-day free trial
+                <span className="text-[#f14e58]">a 7-day free trial</span>
               </h1>
             </div>
 
@@ -57,11 +57,11 @@ export function Screen26({ onNext }: Screen26Props) {
                       Monthly
                     </div>
                     <div className="flex items-baseline gap-1 mb-1">
-                      <span className="font-['Poppins:Bold',sans-serif] font-bold text-[24px] text-black">$15</span>
+                      <span className="font-['Poppins:Bold',sans-serif] font-bold text-[24px] text-black">$12.99</span>
                       <span className="font-['Poppins:Regular',sans-serif] font-normal text-[14px] text-[#6b7280]">/mo</span>
                     </div>
                     <div className="font-['Poppins:Regular',sans-serif] font-normal text-[12px] text-[#9ca3af]">
-                      Billed as one payment of $15 per month
+                      Start with 7 days free first
                     </div>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ export function Screen26({ onNext }: Screen26Props) {
                       <span className="font-['Poppins:Regular',sans-serif] font-normal text-[14px] text-[#6b7280]">/mo</span>
                     </div>
                     <div className="font-['Poppins:Regular',sans-serif] font-normal text-[12px] text-[#9ca3af]">
-                      Then $94 per year after 7-day free trial
+                      Then $59.88 per year after 7-day free trial
                     </div>
                   </div>
                   {selectedPlan === 'annual' && (
@@ -162,7 +162,12 @@ export function Screen26({ onNext }: Screen26Props) {
         <div className="fixed bottom-0 left-0 right-0 px-6 pb-8 pt-6 bg-gradient-to-t from-[#f5f5f5] via-[#f5f5f5] to-transparent pointer-events-none" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
           <div className="max-w-[450px] mx-auto pointer-events-auto">
             <button
-              onClick={() => window.location.href = 'https://buy.stripe.com/14AcN64lJ5DWdpdg1L93y04'}
+              onClick={() => {
+                const url = selectedPlan === 'annual' 
+                  ? 'https://buy.stripe.com/3cIcN63hFd6odpd6rb93y05'
+                  : 'https://buy.stripe.com/8x214o9G3giA5WLdTD93y03';
+                window.location.href = url;
+              }}
               className="w-full h-[56px] rounded-[32px] text-white font-['Roboto:SemiBold','Noto_Sans_Symbols:SemiBold',sans-serif] font-semibold text-[18px] leading-[22px] uppercase transition-all bg-[#f14e58] hover:bg-[#e03d47]"
               style={{ fontVariationSettings: "'wdth' 100" }}
             >
