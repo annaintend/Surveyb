@@ -11,11 +11,17 @@ export function Screen17B({ onNext }: Screen17BProps) {
   const [email, setEmail] = useState('');
 
   const handleContinue = () => {
-    onNext({ name, email });
+    localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        name,
+        email
+      }))
     window?.amplitude?.track?.("lead_form_submitted", {
       has_name: !!name.length,
       has_email: !!email.length
     });
+
+    onNext({ name, email });
   };
 
   const isValidEmail = (email: string) => {

@@ -27,6 +27,18 @@ export function Screen18({ onNext }: Screen18Props) {
       });
     }, 1500);
 
+    const answers = JSON.parse(localStorage.getItem('answers') || '{}');
+    const form = new FormData();
+    for(const key in answers) {
+      form.append(key, answers[key]);
+    }
+
+    fetch('https://hooks.zapier.com/hooks/catch/26016019/ulmeld4/', {
+      method: 'POST',
+      body: form,
+    });
+
+
     window?.amplitude?.track?.("plan_generation_started");
 
     return () => clearInterval(interval);

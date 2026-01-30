@@ -18,6 +18,10 @@ export function Screen11({ onNext }: Screen11Props) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        eating_out_frequency: selected
+      }))
       onNext();
     }
   };

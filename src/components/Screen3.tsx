@@ -19,6 +19,10 @@ export function Screen3({ onNext }: Screen3Props) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        feel_after_eating: selected
+      }))
       onNext();
     }
   };

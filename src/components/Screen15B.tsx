@@ -19,6 +19,10 @@ export function Screen15B({ onNext }: Screen15BProps) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        main_goal: selected
+      }))
       onNext();
     }
   };

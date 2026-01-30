@@ -19,6 +19,10 @@ export function Screen4({ onNext }: Screen4Props) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        energy_after_eating: selected
+      }))
       onNext();
     }
   };

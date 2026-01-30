@@ -18,6 +18,10 @@ export function Screen13({ onNext }: Screen13Props) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        confidence_eating_out: selected
+      }))
       onNext();
     }
   };

@@ -19,6 +19,10 @@ export function Screen5({ onNext }: Screen5Props) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        felt_off_after_eating_well: selected
+      }))
       onNext();
     }
   };

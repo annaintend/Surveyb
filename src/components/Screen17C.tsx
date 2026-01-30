@@ -22,6 +22,10 @@ export function Screen17C({ onNext }: Screen17CProps) {
 
   const handleContinue = () => {
     if (selectedAge) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        age_range: selectedAge
+      }))
       onNext({ ageRange: selectedAge });
     }
   };

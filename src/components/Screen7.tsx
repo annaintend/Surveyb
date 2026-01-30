@@ -19,6 +19,10 @@ export function Screen7({ onNext }: Screen7Props) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        energy_predictability: selected
+      }))
       onNext();
     }
   };

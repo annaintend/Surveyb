@@ -18,6 +18,10 @@ export function Screen10({ onNext }: Screen10Props) {
 
   const handleNext = () => {
     if (selected) {
+      localStorage.setItem('answers', JSON.stringify({
+        ...JSON.parse(localStorage.getItem('answers') || '{}'),
+        food_preparation_habits: selected
+      }))
       onNext();
     }
   };
