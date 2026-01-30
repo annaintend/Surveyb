@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
-import imgTrustedBy from "figma:asset/558fc4b746f89a80bf0f0675324affb06a3b1406.png";
+import imgSugarnologooo1 from "@/assets/sugarno-black-logo.png";
+import imgTrustedBy from "@/assets/review.png";
 
 interface Screen2Props {
   onNext: () => void;
