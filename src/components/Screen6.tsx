@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import imgSugarnologooo1 from "@/assets/sugarno-black.png";
-import img1932 from "@/assets/thats-more-common.png";
+import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
+import img1932 from "figma:asset/2667ac5d63702f710b80a7d97ec5142d0b68ba8e.png";
 
 interface Screen6Props {
   onNext: () => void;
@@ -26,7 +26,7 @@ export function Screen6({ onNext }: Screen6Props) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="flex-1 flex flex-col items-center justify-center px-6 pt-[32px] pb-[200px] min-h-0"
+          className="flex-1 flex flex-col items-center justify-start px-6 pt-[80px] sm:pt-[100px] md:justify-center md:pt-[32px] pb-[200px] min-h-0"
         >
           {/* Circular infographic - truly scalable */}
           <div className="w-full max-w-[min(450px,85vw)] flex-shrink mb-8">

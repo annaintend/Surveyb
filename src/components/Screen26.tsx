@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Check } from 'lucide-react';
 import { useState } from 'react';
-import imgSugarnologooo1 from "@/assets/sugarno-black.png";
+import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
 
 interface Screen26Props {
   onNext: () => void;
@@ -23,13 +23,13 @@ export function Screen26({ onNext }: Screen26Props) {
         </div>
 
         {/* Content area - scrollable */}
-        <div className="flex-1 overflow-y-auto pt-[93px] pb-32">
+        <div className="flex-1 overflow-y-auto pt-[70px] pb-[120px]" style={{ WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="px-6"
+            className="px-6 pt-6"
           >
             {/* Header section */}
             <div className="text-center mb-8">
@@ -159,7 +159,7 @@ export function Screen26({ onNext }: Screen26Props) {
         </div>
 
         {/* Button */}
-        <div className="fixed bottom-0 left-0 right-0 px-6 pb-8 pt-4 bg-[#f5f5f5] pointer-events-none" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
+        <div className="fixed bottom-0 left-0 right-0 px-6 pb-8 pt-6 bg-gradient-to-t from-[#f5f5f5] via-[#f5f5f5] to-transparent pointer-events-none" style={{ paddingBottom: 'max(2rem, env(safe-area-inset-bottom))' }}>
           <div className="max-w-[450px] mx-auto pointer-events-auto">
             <button
               onClick={() => window.location.href = 'https://buy.stripe.com/14AcN64lJ5DWdpdg1L93y04'}

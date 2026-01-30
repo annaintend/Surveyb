@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
-import imgSugarnologooo1 from "@/assets/sugarno-black.png";
-import imgWillpower from "@/assets/willpower.png";
+import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
+import imgWillpower from "figma:asset/f672a3c19e6feb969fca174a2cefcd9b373e2af2.png";
 
 interface Screen14Props {
   onNext: () => void;
@@ -25,7 +25,7 @@ export function Screen14({ onNext }: Screen14Props) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="flex-1 flex flex-col items-center justify-center px-6 pt-[32px] pb-[200px] min-h-0"
+          className="flex-1 flex flex-col items-center justify-start px-6 pt-[80px] sm:pt-[100px] md:justify-center md:pt-[32px] pb-[200px] min-h-0"
         >
           {/* Willpower infographic - truly scalable */}
           <div className="w-full max-w-[min(400px,80vw)] flex-shrink mb-8">
