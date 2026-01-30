@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
 
 interface Screen18Props {
   onNext: () => void;

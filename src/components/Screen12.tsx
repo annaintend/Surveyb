@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
 import img51 from "figma:asset/154c3c7b4c42e50a3621dac6b5ae63e0d1f9bfda.png";
 

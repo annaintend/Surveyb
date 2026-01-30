@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Screen1 } from './components/Screen1';
 import { Screen2 } from './components/Screen2';
 import { Screen3 } from './components/Screen3';
