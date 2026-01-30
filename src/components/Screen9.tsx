@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
-import img46 from "figma:asset/4be9e467f9ce172d98927aa1570147e391231a06.png";
+import img46 from "@/assets/signals-sugarpng.png";
 
 interface Screen9Props {
   onNext: () => void;
