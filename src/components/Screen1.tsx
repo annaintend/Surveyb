@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import imgGroup1331 from "figma:asset/dba41bced4dc6d5ca756ea706bde049acd320857.png";
+import imgGroup1331 from "@/assets/main_screen_final.png";
 import imgSugarnologooo1 from "figma:asset/90d0b2808b9f2d4ad23a49432895256cef99dbdf.png";
 
 interface Screen1Props {
