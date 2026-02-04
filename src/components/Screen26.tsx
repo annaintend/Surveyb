@@ -13,6 +13,7 @@ export function Screen26({ onNext }: Screen26Props) {
 
   useEffect(() => {
     window?.amplitude?.track?.("plan_selection_viewed");
+    window?.fbq('track', 'InitiateCheckout');
   }, [])
 
   return (
