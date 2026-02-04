@@ -27,6 +27,7 @@ import { Screen26 } from './components/Screen26';
 declare global {
   interface Window {
     amplitude: any | undefined
+    fbq: any | undefined
   }
 }
 
